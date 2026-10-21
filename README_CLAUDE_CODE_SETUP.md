@@ -87,7 +87,7 @@ Claude Code asks before it runs a command or changes a file. You'll see the exac
 - **Allow always**: for that kind of action in this folder, so it stops asking about the same thing.
 - **Deny**: it stops and asks you what to do instead.
 
-Nothing goes to Mailchimp or publishes on the website unless you do it or explicitly tell Claude to.
+Nothing goes to Mailchimp or onto the live website unless you do it yourself. Claude builds and stages; you send and publish.
 
 ## 5. Connect the website (Prismic), one time
 
@@ -103,7 +103,15 @@ claude
 2. Select **prismic**, then **Authenticate**.
 3. Sign in to Prismic in the browser that opens.
 
-Claude can now read the site's exhibitions and create or update pages. **Everything it writes goes into a Prismic Release**, which is a draft area. Nothing goes live until you publish that release in Prismic, or tell Claude in so many words "publish the release".
+Claude can now read the site's exhibitions and create or update pages. **Everything it writes goes into a Prismic Release**, which is a draft area.
+
+**Only you publish, by hand.** Claude Code is blocked from publishing to the live site (the block is in `.claude/settings.json`). When it finishes, it tells you the release name. To take the changes live:
+
+1. In Prismic, open **Releases** and pick that release.
+2. Preview the pages and check them.
+3. Click **Publish**.
+
+If something looks wrong, tell Claude what to fix before you publish. A release that's never published never reaches the site.
 
 ## 6. Everyday use
 
@@ -137,7 +145,9 @@ Every link to gallerysonder.com already carries tracking tags (`utm_source=mailc
 ```
 sonder-studio/
   README_CLAUDE_CODE_SETUP.md   this file
+  CLAUDE.md                     house rules Claude follows in this folder
   .mcp.json                     connects Claude Code to Prismic
+  .claude/settings.json         blocks Claude from publishing to the live site
   scripts/
     extract_catalogue.py        reads a pre-catalogue PDF: works, prices, images
     package_mailchimp_zip.sh    builds the clean Mailchimp import zip

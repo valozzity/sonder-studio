@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "deny": [
+      "mcp__prismic__publish_release"
+    ]
+  }
+}

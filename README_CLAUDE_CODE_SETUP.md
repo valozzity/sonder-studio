@@ -10,7 +10,23 @@ The first setup takes about 15 minutes. After that, you open the folder and star
 
 - A Mac running macOS 13 or newer.
 - A paid Claude plan: **Pro** or **Max** at claude.ai. The free plan doesn't include Claude Code.
-- This folder (`sonder-studio`) somewhere on your Mac, for example `Documents/sonder-studio`.
+- A free **GitHub** account (github.com). Carlo will invite it to the private `sonder-studio` repository.
+
+## Get the folder (one time)
+
+The folder lives in a private GitHub repository, so updates from Carlo reach you with one click.
+
+1. Accept the invite email from GitHub ("valozzity invited you to valozzity/sonder-studio").
+2. Download **GitHub Desktop** from https://desktop.github.com and sign in with your GitHub account.
+3. In GitHub Desktop: **File → Clone Repository**, then the **GitHub.com** tab. Pick `valozzity/sonder-studio` and click **Clone**.
+
+The folder is now at `Documents/GitHub/sonder-studio`.
+
+### Getting updates
+
+When Carlo says there's an update, open GitHub Desktop and click **Fetch origin**, then **Pull origin**. Do this before you start work.
+
+If GitHub Desktop says you have local changes, those are your own show folders and edits. Type a short summary (for example "Spring show emails") and click **Commit to main**, then **Push origin**. That saves your work to the repository, and it also backs it up.
 
 ## 2. Install Claude Code
 
@@ -20,7 +36,7 @@ There are two ways to use it. Install both; it's quick.
 
 1. Download it from https://claude.com/download and drag it into Applications.
 2. Open it and sign in with your Claude account.
-3. Click the **Code** tab, then choose the `sonder-studio` folder as your project.
+3. Click the **Code** tab, then choose the `Documents/GitHub/sonder-studio` folder as your project.
 
 You can now type requests the same way you'd chat with Claude.
 
@@ -47,7 +63,7 @@ You can now type requests the same way you'd chat with Claude.
 In Terminal, go to the folder and start Claude Code:
 
 ```bash
-cd ~/Documents/sonder-studio
+cd ~/Documents/GitHub/sonder-studio
 claude
 ```
 

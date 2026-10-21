@@ -1,0 +1,5 @@
+.DS_Store
+__pycache__/
+*.pyc
+# Built Mailchimp zips: regenerate with scripts/package_mailchimp_zip.sh
+*_MAILCHIMP.zip
